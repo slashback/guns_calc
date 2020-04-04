@@ -41,7 +41,7 @@ class CalcContainer extends React.Component {
         } = this.state;
         const totalPrice = this.calcTotalPrice();
         const pricePerPlayer = Math.round(totalPrice / playersCount);
-        console.log('UPdating total from ', this.state.totalPrice, ' to ', totalPrice)
+
         this.setState((state) => {
             return {...state, totalPrice: totalPrice, pricePerPlayer: pricePerPlayer};
         });
@@ -57,8 +57,6 @@ class CalcContainer extends React.Component {
     }
 
     render() {
-        console.log('RENDER')
-        console.log(this.state.pricePerPlayer, this.state.totalPrice)
         return (
             <Calc
                 playersCount={this.state.playersCount}

@@ -1,9 +1,6 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
 import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
-import Typography from "@material-ui/core/Typography";
 
 import CountInput from "../count_input/CountInput";
 import Totals from "../totals/Totals";
@@ -22,12 +19,11 @@ const Calc = (props) => {
     } = props;
 
     const handleChange = (event, param) => {
-        console.log("Changed");
         handleChangeParam(param, parseInt(event.target.value, 10));
     };
 
     return (
-        <Container maxWidth={'sm'}>
+        <div className={'Calc'}>
             <div className={'formContainer'} style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -101,7 +97,7 @@ const Calc = (props) => {
                 </FormControl>
 
             </div>
-        </Container>
+        </div>
     );
 };
 
